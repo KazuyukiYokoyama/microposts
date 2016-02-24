@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.timestamps null: false
       
       #この行を追加
-      t.imdex :email, unique: true 
+      t.index :email, unique: true 
     end
   end
 end
