@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
     uniqueness: { case_sensitive: false }
     validates :introduction, presence: true, length: {minimum: 2, maximum: 300}, on: :update
     has_secure_password
+    has_many :microposts
 end
