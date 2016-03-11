@@ -1,0 +1,24 @@
+<h1>follower</h1>
+<br>
+<% @user.follower_users.each do |follower_user| %>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <aside class="col-md-5">
+        <section class="user_info">
+         <h1>
+          <%= gravatar_for follower_user %>
+          <%= follower_user.name %>
+         </h1>
+         <span><%= link_to "view profile", follower_user %></span>
+         <br>
+          <p><%= follower_user.birthplace %></p>
+          <p><%= follower_user.introduction %></p>
+         <br>
+        </section>
+      </aside>
+      <div class="col-md-3">
+        <%= render 'follow_form' if logged_in? %>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+<% end %>
