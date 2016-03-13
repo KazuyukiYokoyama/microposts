@@ -6,6 +6,7 @@
       <%= @user.name %>
      </h1>
     <br>
+    <h4><%= link_to "following", followings_user_path %>(<%= @user.following_users.count %>)　　　　 <%= link_to "follower", followers_user_path %>(<%= @user.follower_users.count %>)</h4>
     </section>
   </aside>
   <div class="col-md-8">
