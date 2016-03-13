@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   end
   
   def followings
+   
   end
   
   def followers
